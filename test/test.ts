@@ -1,6 +1,6 @@
 import * as assert from "assert";
 import { XmlParser, XmlSerializer } from "../src";
-import { XmlContent, XmlType, XmlAttribute, XmlElement } from "../src/decorators";
+import { XmlAttribute, XmlContent, XmlElement, XmlType } from "../src/decorators";
 
 context("Test", () => {
 
