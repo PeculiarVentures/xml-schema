@@ -1,5 +1,12 @@
 # XML-SCHEMA
 
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/PeculiarVentures/xml-schema/master/LICENSE.md)
+[![CircleCI](https://circleci.com/gh/PeculiarVentures/xml-schema.svg?style=svg)](https://circleci.com/gh/PeculiarVentures/xml-schema)
+[![Coverage Status](https://coveralls.io/repos/github/PeculiarVentures/xml-schema/badge.svg?branch=master)](https://coveralls.io/github/PeculiarVentures/xml-schema?branch=master)
+[![npm version](https://badge.fury.io/js/@pv/xml-schema.svg)](https://badge.fury.io/js/@pv/xml-schema)
+
+[![NPM](https://nodei.co/npm/@pv/xml-schema.png)](https://nodei.co/npm/@pv/xml-schema/)
+
 This package uses ES2015 [decorators](https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841) to simplify XML [schema creation and use](https://www.w3.org/standards/xml/schema). 
 
 
