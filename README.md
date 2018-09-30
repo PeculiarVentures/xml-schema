@@ -17,7 +17,7 @@ This is important because validating input data before its use is important to d
 Installation is handled via  `npm`:
 
 ```
-$ npm install xml-schema
+$ npm install @pv/xml-schema
 ```
 
 ## Examples
