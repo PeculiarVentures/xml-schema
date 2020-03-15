@@ -82,11 +82,7 @@
   },
   "mocha": {
     "require": "ts-node/register",
-    "extension": [
-      "ts"
-    ],
-    "watch-files": [
-      "test/**/*.ts"
-    ]
+    "extension": ["ts"],
+    "watch-files": ["test/**/*.ts"]
   }
 }
