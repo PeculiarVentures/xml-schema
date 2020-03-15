@@ -1,22 +1,39 @@
-import typescript from "rollup-plugin-typescript";
-import builtins from "rollup-plugin-node-builtins";
-import cleanup from "rollup-plugin-cleanup";
+import typescript from "rollup-plugin-typescript2";
+const pkg = require("./package.json");
 
-let pkg = require("./package.json");
-let external = [...Object.keys(pkg.dependencies)];
+const banner = [
+  "/**",
+  " * Copyright (c) 2016-2020, Peculiar Ventures, All rights reserved.",
+  " */",
+  "",
+].join("\n");
+const input = "src/index.ts";
+const external = Object.keys(pkg.dependencies).concat(["events"]);
 
 export default {
-  input: "src/index.ts",
+  input,
   plugins: [
-    typescript({ typescript: require("typescript"), target: "esnext" }),
-    cleanup({ extensions: ["ts"] }),
-    builtins(),
+    typescript({
+      check: true,
+      clean: true,
+      tsconfigOverride: {
+        compilerOptions: {
+          module: "ES2015",
+        }
+      }
+    }),
   ],
   external,
   output: [
     {
+      banner,
       file: pkg.main,
       format: "cjs",
-    }
-  ]
+    },
+    {
+      banner,
+      file: pkg.module,
+      format: "es",
+    },
+  ],
 };
